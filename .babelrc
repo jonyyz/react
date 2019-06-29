@@ -1,0 +1,18 @@
+{
+  "presets": [
+    [
+      "@babel/env",
+      {
+        "modules": false
+      }
+    ],
+    "@babel/react",
+    "@babel/typescript",
+  ],
+  "plugins": [
+    "@babel/plugin-transform-runtime",
+    "@babel/plugin-syntax-class-properties",
+    "@babel/plugin-syntax-object-rest-spread",
+    "@babel/plugin-proposal-class-properties",
+  ],
+}

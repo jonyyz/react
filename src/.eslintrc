@@ -1,0 +1,51 @@
+{
+  "parser": "babel-eslint",
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "plugins": [
+    "react"
+  ],
+  "settings": {
+    "react": {
+      "version": "16.6"
+    },
+  },
+  "env": {
+    "browser": true,
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended",
+  ],
+  "globals": {
+    "SERVICE_URL": false
+  },
+  "rules": {
+    "strict": 0,
+    "keyword-spacing": [
+      "error",
+      {
+        "after": true,
+      },
+    ],
+    "react/jsx-uses-vars": "error",
+    "react/jsx-uses-react": "error",
+    "react/react-in-jsx-scope": "error",
+    "react/prop-types": [
+      "error",
+      {
+        "ignore": [
+          "children",
+          "theme",
+          "classes",
+          "location",
+          "history",
+          "match",
+        ]
+      }
+    ]
+  }
+}

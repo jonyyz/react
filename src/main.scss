@@ -1,0 +1,19 @@
+html, body, #app {
+  height: 100%;
+}
+
+body {
+  font-family: roboto;
+}
+
+#app {
+  display: flex;
+  flex-direction: column;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-transition-delay: 999999s;
+}
