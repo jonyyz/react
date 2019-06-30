@@ -17,7 +17,7 @@ const styles = () => createStyles({
 });
 
 interface Props {
-  classes: any;
+  classes: Record<string, string>;
 }
 
 class Body extends React.Component<Props> {
