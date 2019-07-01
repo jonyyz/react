@@ -34,7 +34,7 @@ const Welcome: React.FunctionComponent<IProps> = (props) => {
             Greetings and Salutations!
           </Typography>
           <Typography component="p">
-            Welcome to Jon's Carbonite Take Home coding test.  Click the Get Users button in the top right corner to evaluate the exercise.
+            Welcome to Jon's Carbonite Take Home coding test.  Use the Get Users button in the top right corner to evaluate the exercise.
           </Typography>
         </Paper>
       </div>
