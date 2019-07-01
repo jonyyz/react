@@ -30,6 +30,9 @@ import {
 import getUsers from "../actions/getUsers";
 
 const styles = createStyles({
+  table: {
+    whiteSpace: "nowrap"
+  },
   sortableColumn: {
     cursor: "pointer"
   },
@@ -37,6 +40,9 @@ const styles = createStyles({
     display: "flex",
     flexDirection: "row",
     alignItems: "center"
+  },
+  search: {
+    minWidth: 100
   }
 });
 
@@ -169,6 +175,7 @@ class Users extends React.PureComponent<IProps, IState> {
                     )
                   }
                   <TextField
+                    className={classes.search}
                     placeholder="Search"
                     InputProps={{
                       startAdornment: (
@@ -200,7 +207,7 @@ class Users extends React.PureComponent<IProps, IState> {
 
                 return (
                   <TableRow key={id}>
-                    <TableCell component="th" scope="row">{companyName}</TableCell>
+                    <TableCell>{companyName}</TableCell>
                     <TableCell>{name}</TableCell>
                     <TableCell>{website}</TableCell>
                     <TableCell>{city}</TableCell>
