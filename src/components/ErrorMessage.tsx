@@ -23,7 +23,7 @@ interface IProps {
   text: string
 }
 
-const ErrorMessage: React.FunctionComponent<IProps> = ({ text }) => {
+const ErrorMessage: React.FunctionComponent<IProps> = React.memo(({ text }) => {
   const classes = useStyles({});
 
   return (
@@ -32,6 +32,6 @@ const ErrorMessage: React.FunctionComponent<IProps> = ({ text }) => {
       <Typography className={classes.errorMessage} variant="body1">{text}</Typography>
     </div>
   );
-}
+});
 
 export default ErrorMessage;

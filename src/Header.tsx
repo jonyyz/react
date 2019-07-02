@@ -33,7 +33,7 @@ interface IProps {
   title: string
 }
 
-const Header: React.FunctionComponent<IProps> = ({ title }) => {
+const Header: React.FunctionComponent<IProps> = React.memo(({ title }) => {
   const classes = useStyles({});
 
   return (
@@ -56,6 +56,6 @@ const Header: React.FunctionComponent<IProps> = ({ title }) => {
       </AppBar>
     </div>
   );
-}
+});
 
 export default Header;
