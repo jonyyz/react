@@ -8,7 +8,7 @@ import Welcome from "./views/Welcome";
 import Users from "./views/Users";
 import NotFound from "./NotFound";
 
-const Routes = () => {
+const Routes: React.FunctionComponent = () => {
   return (
     <Switch>
       <Route exact path="/" component={Welcome} />

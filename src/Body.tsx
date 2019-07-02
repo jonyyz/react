@@ -1,12 +1,12 @@
 import * as React from "react";
 import {
-  createStyles,
-  withStyles
-} from "@material-ui/core/styles";
+  makeStyles,
+  createStyles
+} from "@material-ui/styles";
 
 import Routes from "./Routes";
 
-const styles = () => createStyles({
+const useStyles = makeStyles(() => createStyles({
   container: {
     height: "100%",
     overflow: "hidden",
@@ -14,22 +14,16 @@ const styles = () => createStyles({
     flexDirection: "column",
     alignContent: "flex-start",
   }
-});
+}));
 
-interface Props {
-  classes: Record<string, string>;
+const Body: React.FunctionComponent = () => {
+  const classes = useStyles({});
+
+  return (
+    <div className={classes.container}>
+      <Routes />
+    </div>
+  );
 }
 
-class Body extends React.Component<Props> {
-  render() {
-    const { classes } = this.props;
-
-    return (
-      <div className={classes.container}>
-        <Routes />
-      </div>
-    )
-  }
-}
-
-export default withStyles(styles)(Body);
+export default Body;

@@ -2,34 +2,38 @@ import * as React from "react";
 
 import {
   Theme,
-  createStyles,
-  withStyles
+  makeStyles,
+  createStyles
 } from "@material-ui/core/styles";
 import Typography from "@material-ui/core/Typography";
+import Link from "@material-ui/core/Link";
 
-const styles = ({ palette, spacing }: Theme) => createStyles({
+const useStyles = makeStyles(({ palette, spacing }: Theme) => createStyles({
   footer: {
     padding: spacing(2),
     marginTop: "auto",
     backgroundColor: palette.primary.main,
     color: palette.getContrastText(palette.primary.main)
   }
-});
+}));
 
-interface IProps {
-  classes: Record<string, string>
-}
-
-const Header: React.FunctionComponent<IProps> = (props) => {
-  const { classes } = props;
+const Footer: React.FunctionComponent = () => {
+  const classes = useStyles({});
 
   return (
     <div className={classes.footer}>
-      <a href="https://www.carbonite.com/" target="_blank" rel="noopener noreferrer">
-        <Typography variant="body1">Visit Carbonite!</Typography>
-      </a>
+      <Typography variant="body1">
+        <Link
+          href="https://www.carbonite.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+          color="inherit"
+        >
+          Visit Carbonite!
+        </Link>
+      </Typography>
     </div>
   );
 }
 
-export default withStyles(styles)(Header);
+export default Footer;

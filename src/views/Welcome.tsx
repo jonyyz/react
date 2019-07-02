@@ -1,15 +1,16 @@
 import * as React from "react";
+
+import { Theme } from "@material-ui/core/styles";
 import {
-  Theme,
+  makeStyles,
   createStyles,
-  withStyles
-} from "@material-ui/core/styles";
+} from "@material-ui/styles";
 import Paper from "@material-ui/core/Paper";
 import Typography from "@material-ui/core/Typography";
 
 import CenteredContainer from "../components/CenteredContainer";
 
-const styles = (theme: Theme) => createStyles({
+const useStyles = makeStyles((theme: Theme) => createStyles({
   container: {
     padding: theme.spacing(2),
   },
@@ -17,14 +18,10 @@ const styles = (theme: Theme) => createStyles({
     padding: theme.spacing(3, 2),
     maxWidth: 600
   },
-});
+}));
 
-interface IProps {
-  classes: Record<string, string>
-}
-
-const Welcome: React.FunctionComponent<IProps> = (props) => {
-  const { classes } = props;
+const Welcome: React.FunctionComponent = () => {
+  const classes = useStyles({});
 
   return (
     <CenteredContainer>
@@ -42,4 +39,4 @@ const Welcome: React.FunctionComponent<IProps> = (props) => {
   );
 }
 
-export default withStyles(styles)(Welcome);
+export default Welcome;

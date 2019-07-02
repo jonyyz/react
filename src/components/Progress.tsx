@@ -1,12 +1,12 @@
 import * as React from "react";
 
 import {
+  makeStyles,
   createStyles,
-  withStyles
-} from "@material-ui/core/styles";
+} from "@material-ui/styles";
 import CircularProgress from "@material-ui/core/CircularProgress";
 
-const styles = createStyles({
+const useStyles = makeStyles(() => createStyles({
   container: {
     display: "flex",
     flexDirection: "column",
@@ -14,14 +14,10 @@ const styles = createStyles({
     alignItems: "center",
     justifyContent: "center",
   },
-});
+}));
 
-interface IProps {
-  classes: Record<string, string>
-}
-
-const Progress: React.FunctionComponent<IProps> = (props) => {
-  const { classes } = props;
+const Progress: React.FunctionComponent = () => {
+  const classes = useStyles({});
 
   return (
     <div className={classes.container}>
@@ -30,4 +26,4 @@ const Progress: React.FunctionComponent<IProps> = (props) => {
   );
 }
 
-export default withStyles(styles)(Progress);
+export default Progress;

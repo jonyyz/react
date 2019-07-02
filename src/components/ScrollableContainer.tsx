@@ -1,31 +1,24 @@
 import * as React from "react";
 
 import {
+  makeStyles,
   createStyles,
-  withStyles
-} from "@material-ui/core/styles";
+} from "@material-ui/styles";
 
-const styles = createStyles({
+const useStyles = makeStyles(() => createStyles({
   scrollable: {
     overflowY: "auto",
     overflowX: "auto",
     "-webkit-overflow-scrolling": "touch",
   }
-});
+}));
 
-interface IProps {
-  classes: Record<string, string>
-}
-
-const ScrollableContainer: React.FunctionComponent<IProps> = (props) => {
-  const {
-    classes,
-    children
-  } = props;
+const ScrollableContainer: React.FunctionComponent = ({ children }) => {
+  const classes = useStyles({});
 
   return (
     <div className={classes.scrollable}>{children}</div>
   );
 }
 
-export default withStyles(styles)(ScrollableContainer);
+export default ScrollableContainer;

@@ -1,14 +1,14 @@
 import * as React from "react";
 
 import {
+  makeStyles,
   createStyles,
-  withStyles
-} from "@material-ui/core/styles";
+} from "@material-ui/styles";
 import Typography from "@material-ui/core/Typography";
 import ErrorIcon from "@material-ui/icons/Error";
 
-const styles = createStyles({
-  errorMessageContainer: {
+const useStyles = makeStyles(() => createStyles({
+  container: {
     margin: 20,
     display: "flex",
     flexDirection: "row"
@@ -17,24 +17,21 @@ const styles = createStyles({
     marginTop: 6,
     marginLeft: 6,
   },
-});
+}));
 
 interface IProps {
-  classes: Record<string, string>,
   text: string
 }
 
-const ErrorMessage: React.FunctionComponent<IProps> = (props) => {
-  const { classes } = props;
+const ErrorMessage: React.FunctionComponent<IProps> = ({ text }) => {
+  const classes = useStyles({});
 
   return (
-    <div className={classes.errorMessageContainer}>
+    <div className={classes.container}>
       <ErrorIcon color="error" fontSize="large" />
-      <Typography className={classes.errorMessage} variant="body1">
-        {props.text}
-      </Typography>
+      <Typography className={classes.errorMessage} variant="body1">{text}</Typography>
     </div>
   );
 }
 
-export default withStyles(styles)(ErrorMessage);
+export default ErrorMessage;
