@@ -33,9 +33,6 @@ const useStyles = makeStyles(createStyles({
   table: {
     whiteSpace: "nowrap"
   },
-  sortableColumn: {
-    cursor: "pointer"
-  },
   header: {
     display: "flex",
     flexDirection: "row",
@@ -43,7 +40,8 @@ const useStyles = makeStyles(createStyles({
   headerSort: {
     display: "flex",
     flexDirection: "row",
-    alignItems: "center"
+    alignItems: "center",
+    cursor: "pointer"
   },
   search: {
     minWidth: 100
@@ -136,7 +134,7 @@ const Users: React.FunctionComponent<RouteComponentProps> = () => {
       <Table className={classes.table}>
         <TableHead>
           <TableRow>
-            <TableCell className={classes.sortableColumn}>
+            <TableCell>
               <div className={classes.header}>
                 <div
                   className={classes.headerSort}
