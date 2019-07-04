@@ -39,6 +39,10 @@ const useStyles = makeStyles(createStyles({
   header: {
     display: "flex",
     flexDirection: "row",
+  },
+  headerSort: {
+    display: "flex",
+    flexDirection: "row",
     alignItems: "center"
   },
   search: {
@@ -79,11 +83,6 @@ const Users: React.FunctionComponent<RouteComponentProps> = () => {
     }
 
     setSortBy([{ name: columnName, direction: "asc" }]);
-  }
-
-  function onHeaderFilterClick(e: React.MouseEvent) {
-    // Stop clicking in the filter TextField from changing sort direction
-    e.stopPropagation();
   }
 
   function onHeaderFilterChange(e: React.ChangeEvent<HTMLInputElement>, columnName: string) {
@@ -137,20 +136,22 @@ const Users: React.FunctionComponent<RouteComponentProps> = () => {
       <Table className={classes.table}>
         <TableHead>
           <TableRow>
-            <TableCell
-              className={classes.sortableColumn}
-              onClick={(e: React.MouseEvent) => onHeaderClick(e, "companyName")}
-            >
+            <TableCell className={classes.sortableColumn}>
               <div className={classes.header}>
-                Company Name&nbsp;
-                {
-                  sortBy.length > 0 &&
-                  (
-                    sortBy[0].direction === "asc" ?
-                    <ArrowDropDownIcon /> :
-                    <ArrowDropUpIcon />
-                  )
-                }
+                <div
+                  className={classes.headerSort}
+                  onClick={(e: React.MouseEvent) => onHeaderClick(e, "companyName")}
+                >
+                  Company Name&nbsp;
+                  {
+                    sortBy.length > 0 &&
+                    (
+                      sortBy[0].direction === "asc" ?
+                      <ArrowDropDownIcon /> :
+                      <ArrowDropUpIcon />
+                    )
+                  }
+                </div>
                 <TextField
                   className={classes.search}
                   placeholder="Search"
@@ -161,7 +162,6 @@ const Users: React.FunctionComponent<RouteComponentProps> = () => {
                       </InputAdornment>
                     ),
                   }}
-                  onClick={e => onHeaderFilterClick(e)}
                   onChange={(e: React.ChangeEvent<HTMLInputElement>) => onHeaderFilterChange(e, "companyName")}
                 />
               </div>
