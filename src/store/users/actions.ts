@@ -6,20 +6,20 @@ export const ACTION_USERS_RECEIVE_ERROR    = "users:receive:error";
 
 // Action Definitions
 export interface UsersRequestAction {
-  readonly type: typeof ACTION_USERS_REQUEST
+  readonly type: typeof ACTION_USERS_REQUEST;
 }
 
-export type UsersReceiveAction = {
-  readonly type: typeof ACTION_USERS_RECEIVE,
-  users: IUserBasicInfo[]
+export interface UsersReceiveAction {
+  readonly type: typeof ACTION_USERS_RECEIVE;
+  users: IUserBasicInfo[];
 }
 
-export type UsersReceiveErrorAction = {
-  readonly type: typeof ACTION_USERS_RECEIVE_ERROR,
-  message: string
+export interface UsersReceiveErrorAction {
+  readonly type: typeof ACTION_USERS_RECEIVE_ERROR;
+  message: string;
 }
 
-// Union Action Types
+// Union Action Type
 export type UsersAction =
   UsersRequestAction |
   UsersReceiveAction |

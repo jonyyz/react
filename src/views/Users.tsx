@@ -49,13 +49,13 @@ const useStyles = makeStyles(createStyles({
 }));
 
 interface ISortColumn {
-  name: string,
-  direction: string
+  name: string;
+  direction: string;
 }
 
 interface IFilterColumn {
-  name: string,
-  value: string
+  name: string;
+  value: string;
 }
 
 const Users: React.FunctionComponent<RouteComponentProps> = () => {

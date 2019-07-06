@@ -3,7 +3,7 @@ import * as React from "react";
 import { Theme } from "@material-ui/core/styles";
 import {
   makeStyles,
-  createStyles,
+  createStyles
 } from "@material-ui/styles";
 import Paper from "@material-ui/core/Paper";
 import Typography from "@material-ui/core/Typography";

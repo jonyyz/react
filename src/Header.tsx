@@ -30,7 +30,7 @@ const useStyles = makeStyles(createStyles({
 }));
 
 interface IProps {
-  title: string
+  title: string;
 }
 
 const Header: React.FunctionComponent<IProps> = React.memo(({ title }) => {

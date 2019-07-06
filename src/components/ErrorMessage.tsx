@@ -20,7 +20,7 @@ const useStyles = makeStyles(() => createStyles({
 }));
 
 interface IProps {
-  text: string
+  text: string;
 }
 
 const ErrorMessage: React.FunctionComponent<IProps> = React.memo(({ text }) => {

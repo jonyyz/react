@@ -12,7 +12,7 @@ import UsersReducer from "./users/reducer";
 
 // The top-level state object
 export interface IApplicationState {
-  usersState: IUsersState
+  usersState: IUsersState;
 }
 
 const reducers: Reducer<IApplicationState> = combineReducers<IApplicationState>({
