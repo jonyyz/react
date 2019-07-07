@@ -10,7 +10,7 @@ describe("ErrorMessage", () => {
   test("should render", () => {
     const container = shallow(<ErrorMessage text="error text" />);
 
-    expect(container).toBeDefined();
+    expect(container.length).toBe(1);
     expect(container.name()).toBe("div");
     expect(container.prop("className")).toBe("makeStyles-container-1");
     expect(container.children().length).toBe(2);

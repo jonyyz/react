@@ -11,7 +11,7 @@ describe("ScrollableContainer", () => {
       </ScrollableContainer>
     );
 
-    expect(container).toBeDefined();
+    expect(container.length).toBe(1);
     expect(container.name()).toBe("div");
     expect(container.prop("className")).toBe("makeStyles-scrollable-1");
     expect(container.children().length).toBe(1);
