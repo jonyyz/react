@@ -6,7 +6,7 @@ import {
 } from "@material-ui/styles";
 import CircularProgress from "@material-ui/core/CircularProgress";
 
-const useStyles = makeStyles(() => createStyles({
+const useStyles = makeStyles(createStyles({
   container: {
     display: "flex",
     flexDirection: "column",

@@ -5,7 +5,7 @@ import {
   createStyles,
 } from "@material-ui/styles";
 
-const useStyles = makeStyles(() => createStyles({
+const useStyles = makeStyles(createStyles({
   scrollable: {
     overflowY: "auto",
     overflowX: "auto",

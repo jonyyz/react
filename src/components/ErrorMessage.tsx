@@ -7,7 +7,7 @@ import {
 import Typography from "@material-ui/core/Typography";
 import ErrorIcon from "@material-ui/icons/Error";
 
-const useStyles = makeStyles(() => createStyles({
+const useStyles = makeStyles(createStyles({
   container: {
     margin: 20,
     display: "flex",
