@@ -4,9 +4,9 @@ import {
   Route
 } from "react-router-dom";
 
-import Welcome from "./views/Welcome";
-import Users from "./views/Users";
-import NotFound from "./NotFound";
+import Welcome from "../views/Welcome";
+import Users from "../views/Users";
+import NotFound from "../views/NotFound";
 
 const Routes: React.FunctionComponent = () => {
   return (

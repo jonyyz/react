@@ -7,9 +7,9 @@ import { MuiThemeProvider } from "@material-ui/core/styles";
 import lightGreen from "@material-ui/core/colors/lightGreen";
 import blueGrey from "@material-ui/core/colors/blueGrey";
 
-import Header from "./Header";
-import Body from "./Body";
-import Footer from "./Footer";
+import Header from "./layout/Header";
+import Body from "./layout/Body";
+import Footer from "./layout/Footer";
 
 const theme = createMuiTheme({
   spacing: 4,

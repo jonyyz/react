@@ -6,7 +6,7 @@ import {
 
 import Routes from "./Routes";
 
-const useStyles = makeStyles(() => createStyles({
+const useStyles = makeStyles(createStyles({
   container: {
     height: "100%",
     overflow: "hidden",
