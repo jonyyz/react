@@ -18,11 +18,7 @@ function getUsers() {
       dispatch(getUsersActionCreator());
 
       try {
-        const response = await axios.get(
-          urlJoin(SERVICE_URL, "/users"),
-          { withCredentials: true }
-        );
-
+        const response = await axios.get(urlJoin(SERVICE_URL, "/users"));
         const users: IUserBasicInfo[] = response.data.map((user: IUser): IUserBasicInfo => {
           const {
             id,
