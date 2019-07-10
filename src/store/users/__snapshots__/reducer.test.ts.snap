@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Users reducer UsersReceiveAction 1`] = `
+Object {
+  "fetching": true,
+}
+`;
+
+exports[`Users reducer UsersReceiveAction 2`] = `
+Object {
+  "fetched": true,
+  "fetching": false,
+  "users": Array [
+    Object {
+      "city": "Walla Walla Washington",
+      "companyName": "ACME",
+      "id": 42,
+      "name": "Mel Blanc",
+      "website": "acme.org",
+    },
+  ],
+}
+`;
+
+exports[`Users reducer UsersReceiveError 1`] = `
+Object {
+  "fetchError": "Something went wrong",
+  "fetching": false,
+}
+`;
