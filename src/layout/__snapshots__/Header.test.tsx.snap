@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header should render 1`] = `
+<div
+  className="makeStyles-root-1"
+>
+  <WithStyles(ForwardRef(AppBar))
+    position="static"
+  >
+    <WithStyles(ForwardRef(Toolbar))
+      className="makeStyles-toolBar-2"
+    >
+      <div
+        className="makeStyles-titleContainer-3"
+      >
+        <WithStyles(ForwardRef(Typography))
+          variant="h5"
+        >
+          Carbonite
+        </WithStyles(ForwardRef(Typography))>
+      </div>
+      <WithStyles(ForwardRef(Button))
+        color="secondary"
+        component={[Function]}
+        to="/users"
+        type="submit"
+        variant="contained"
+      >
+        <PersonIcon
+          className="makeStyles-personIcon-4"
+        />
+        Get Users
+      </WithStyles(ForwardRef(Button))>
+    </WithStyles(ForwardRef(Toolbar))>
+  </WithStyles(ForwardRef(AppBar))>
+</div>
+`;
