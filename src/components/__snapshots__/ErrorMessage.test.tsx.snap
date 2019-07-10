@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ErrorMessage should render 1`] = `
+<div
+  className="makeStyles-container-1"
+>
+  <ErrorIcon
+    color="error"
+    fontSize="large"
+  />
+  <WithStyles(ForwardRef(Typography))
+    className="makeStyles-errorMessage-2"
+    variant="body1"
+  >
+    error text
+  </WithStyles(ForwardRef(Typography))>
+</div>
+`;

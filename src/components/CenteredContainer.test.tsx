@@ -4,20 +4,13 @@ import { shallow } from "enzyme";
 import CenteredContainer from "./CenteredContainer";
 
 describe("CenteredContainer", () => {
-  test("should render", () => {
-    const container = shallow(
+  test("should render with children", () => {
+    const wrapper = shallow(
       <CenteredContainer>
         <div id="test">test</div>
       </CenteredContainer>
     );
 
-    expect(container.length).toBe(1);
-    expect(container.name()).toBe("div");
-    expect(container.prop("className")).toBe("makeStyles-container-1");
-    expect(container.children().length).toBe(1);
-
-    const testDiv = container.find("#test");
-    expect(testDiv.length).toBe(1);
-    expect(testDiv.text()).toBe("test");
+    expect(wrapper).toMatchSnapshot();
   });
 });

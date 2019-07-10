@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ScrollableContainer should render with children 1`] = `
+<div
+  className="makeStyles-scrollable-1"
+>
+  <div
+    id="test"
+  >
+    test
+  </div>
+</div>
+`;
