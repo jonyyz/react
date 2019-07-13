@@ -77,7 +77,7 @@ const Users: React.FunctionComponent<RouteComponentProps> = () => {
     if (sortColumn) {
       const { direction: currentSortDirection } = sortColumn;
       setSortBy([{ ...sortColumn, direction: currentSortDirection === "asc" ? "desc" : "asc" }]);
-       return;
+      return;
     }
 
     setSortBy([{ name: columnName, direction: "asc" }]);
@@ -137,6 +137,7 @@ const Users: React.FunctionComponent<RouteComponentProps> = () => {
             <TableCell>
               <div className={classes.header}>
                 <div
+                  id="sortCompanyName"
                   className={classes.headerSort}
                   onClick={(e: React.MouseEvent) => onHeaderClick(e, "companyName")}
                 >
@@ -151,6 +152,7 @@ const Users: React.FunctionComponent<RouteComponentProps> = () => {
                   }
                 </div>
                 <TextField
+                  id="search"
                   className={classes.search}
                   placeholder="Search"
                   InputProps={{
